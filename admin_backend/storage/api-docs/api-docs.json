@@ -1,0 +1,201 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Your super  ApplicationAPI",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/triggers": {
+            "get": {
+                "tags": [
+                    "triggers"
+                ],
+                "operationId": "76973befbc02b385147b0a2b806db0a0",
+                "parameters": [
+                    {
+                        "name": "identificator",
+                        "in": "path",
+                        "description": "trigger Идентификатор - текстовое название триггера на латиннице для удобного обращения через апи, например",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "Тема письма",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "path",
+                        "description": "Текст письма",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    },
+                    {
+                        "name": "trigger_type",
+                        "in": "path",
+                        "description": "Сервисный, Промо\t",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Search trigger by params"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "triggers"
+                ],
+                "operationId": "da5ead48aa167aff6e2adf93c1edb667",
+                "parameters": [
+                    {
+                        "name": "identificator",
+                        "in": "path",
+                        "description": "trigger Идентификатор - текстовое название триггера на латиннице для удобного обращения через апи, например",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "Тема письма",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "path",
+                        "description": "Текст письма",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    },
+                    {
+                        "name": "trigger_type",
+                        "in": "path",
+                        "description": "Сервисный, Промо\t",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Search products by params"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "triggers"
+                ],
+                "operationId": "622fd9a1c2b624f011db7c3f49c5b09d",
+                "parameters": [
+                    {
+                        "name": "identificator",
+                        "in": "path",
+                        "description": "trigger Идентификатор - текстовое название триггера на латиннице для удобного обращения через апи, например",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "Тема письма",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "path",
+                        "description": "Текст письма",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    },
+                    {
+                        "name": "trigger_type",
+                        "in": "path",
+                        "description": "Сервисный, Промо\t",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Store trigger by params"
+                    }
+                }
+            }
+        },
+        "/api/triggers/{id}": {
+            "get": {
+                "tags": [
+                    "triggers"
+                ],
+                "operationId": "d87e348deb7512f585f98774c8e02afc",
+                "responses": {
+                    "200": {
+                        "description": "trigger id"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "triggers"
+                ],
+                "operationId": "7012c5b7a0a7e2e10a18ed305e9f4756",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "trigger id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Delete trigger"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
